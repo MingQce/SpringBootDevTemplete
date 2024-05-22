@@ -2,8 +2,10 @@ package com.example.config;
 
 import com.auth0.jwt.JWT;
 import com.example.entity.RestBean;
+import com.example.entity.dto.Account;
 import com.example.entity.vo.response.AuthorizeVO;
 import com.example.filter.JWTAuthorizeFilter;
+import com.example.service.AccountService;
 import com.example.utils.JWTUtils;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
@@ -32,6 +34,9 @@ public class SecurityConfiguration {//配置SpringSecurity
 
     @Resource
     JWTAuthorizeFilter jwtAuthorizeFilter;
+
+    @Resource
+    AccountService service;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
@@ -82,12 +87,13 @@ public class SecurityConfiguration {//配置SpringSecurity
         response.setContentType("application/json");  //声明返回数据格式
         response.setCharacterEncoding("utf-8");  //设置编码格式
         User user = (User) authentication.getPrincipal();  //获取用户详细信息(UserDetails)
-        String token = utils.createJWT(user, 1, "小明");  //调用工具类根据传入参数生成jwt令牌
+        Account account = service.findAccountByNameOrEmail(user.getUsername());
+        String token = utils.createJWT(user, account.getId(), account.getUsername());  //调用工具类根据传入参数生成jwt令牌
         AuthorizeVO vo = new AuthorizeVO();
         vo.setExpire(JWT.decode(token).getExpiresAt());  //设置过期时间
-        vo.setRole("");  //设置角色
+        vo.setRole(account.getRole());  //设置角色
         vo.setToken(token);
-        vo.setUsername("小明");
+        vo.setUsername(account.getUsername());
         response.getWriter().write(RestBean.success(vo).asJsonString());  //返回json格式成功信息
     }
 

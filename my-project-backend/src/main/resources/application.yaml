@@ -3,3 +3,9 @@ spring:
     jwt:
       key: abcdefghijk
       expire: 7
+  datasource:
+    username: root
+    password: P@ssW0rd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+
