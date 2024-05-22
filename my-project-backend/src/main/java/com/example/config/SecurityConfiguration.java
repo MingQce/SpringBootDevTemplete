@@ -22,6 +22,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @Configuration
 public class SecurityConfiguration {//配置SpringSecurity
@@ -63,8 +64,16 @@ public class SecurityConfiguration {//配置SpringSecurity
 
     public void onLogoutSuccess(HttpServletRequest request,
                                 HttpServletResponse response,
-                                Authentication authentication) throws  IOException, ServletException {
-
+                                Authentication authentication) throws  IOException, ServletException {  //登出(使用redis黑名单方法)
+        response.setContentType("application/json");  //声明返回数据格式
+        response.setCharacterEncoding("utf-8");  //设置编码格式
+        PrintWriter writer = response.getWriter();
+        String authorization = request.getHeader("Authorization");
+        if(utils.invalidateJwt(authorization)){
+            writer.write(RestBean.success().asJsonString());
+        }else {
+            writer.write(RestBean.failure(400, "退出登录失败").asJsonString());
+        }
     }
 
     public void onAuthenticationSuccess(HttpServletRequest request,
