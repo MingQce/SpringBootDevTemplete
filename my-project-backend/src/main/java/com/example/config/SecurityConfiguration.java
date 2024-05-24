@@ -11,6 +11,7 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.BeanUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDeniedException;
@@ -89,11 +90,11 @@ public class SecurityConfiguration {//配置SpringSecurity
         User user = (User) authentication.getPrincipal();  //获取用户详细信息(UserDetails)
         Account account = service.findAccountByNameOrEmail(user.getUsername());
         String token = utils.createJWT(user, account.getId(), account.getUsername());  //调用工具类根据传入参数生成jwt令牌
-        AuthorizeVO vo = new AuthorizeVO();
-        vo.setExpire(JWT.decode(token).getExpiresAt());  //设置过期时间
-        vo.setRole(account.getRole());  //设置角色
-        vo.setToken(token);
-        vo.setUsername(account.getUsername());
+        AuthorizeVO vo = account.asViewObject(AuthorizeVO.class, v -> {
+            v.setExpire(JWT.decode(token).getExpiresAt());  //设置过期时间
+            v.setToken(token);
+        });  //自定义实现了下面的复制方法
+//        BeanUtils.copyProperties(account, vo);  //拷贝前一个对象的参数给后一个对象,省略部分vo.set转移对象参数的功能
         response.getWriter().write(RestBean.success(vo).asJsonString());  //返回json格式成功信息
     }
 
