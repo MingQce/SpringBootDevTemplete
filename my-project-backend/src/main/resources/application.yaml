@@ -2,7 +2,7 @@ spring:
   security:
     jwt:
       key: abcdefghijk
-      expire: 7
+      expire: 7 #暂时定七天，正常不能设置这么久，需要搞令牌续签
   datasource:
     username: root
     password: P@ssW0rd

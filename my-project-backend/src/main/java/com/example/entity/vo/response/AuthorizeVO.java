@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class AuthorizeVO {  //
+public class AuthorizeVO {  //用户信息实体类
     String username;
     String role;
     String token;

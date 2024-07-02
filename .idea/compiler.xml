@@ -10,8 +10,5 @@
         <module name="my-project-backend" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="my-project-backend" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

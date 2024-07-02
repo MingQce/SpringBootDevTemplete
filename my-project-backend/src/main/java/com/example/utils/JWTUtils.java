@@ -33,7 +33,7 @@ public class JWTUtils {  //JWT令牌工具类
 
     public boolean invalidateJwt(String headerToken){  //判断令牌是否有效
         String token = this.convertToken(headerToken);
-        if(token == null) return false;  //
+        if(token == null) return false;
         Algorithm algorithm = Algorithm.HMAC256(key);
         JWTVerifier jwtVerifier = JWT.require(algorithm).build();
         try {
@@ -74,7 +74,7 @@ public class JWTUtils {  //JWT令牌工具类
 
     }
     public String createJWT(UserDetails details, int id, String username){  //创建令牌
-        Algorithm algorithm = Algorithm.HMAC256(key);  //设置加密算法
+        Algorithm algorithm = Algorithm.HMAC256(key);  //设置加密算法  (注意，base64不是加密算法)
         Date expire = this.expireTime();
         return JWT.create()
                 .withJWTId(UUID.randomUUID().toString())  //生成一个随机的令牌uuid，方便后续使指定令牌失效
@@ -82,14 +82,14 @@ public class JWTUtils {  //JWT令牌工具类
                 .withClaim("name", username)  //username
                 .withClaim("authorities", details.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList())  //定义该用户的权限
                 .withExpiresAt(expire) //自定义令牌过期时间
-                .withIssuedAt(new Date())  //颁发时间
+                .withIssuedAt(new Date())  //token颁发时间
                 .sign(algorithm);  //使用算法进行签名,得到最终的jwt令牌
 
     }
 
     public Date expireTime(){  //单独编写日期类型方法设置过期时间
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.HOUR, expire * 24);  //暂时设置为七天方便开发，后续设置JWT令牌续签
+        calendar.add(Calendar.HOUR, expire * 24);  //暂时设置为七天(7*24h)方便开发，后续设置JWT令牌续签
         return calendar.getTime();
     }
 
