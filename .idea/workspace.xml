@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc76ec5e-2c07-46bb-8991-e0ce31cf7912" name="变更" comment="前端:登录页面编写及axios请求封装">
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/filter/CorsFilter.java" afterDir="false" />
+    <list default="true" id="dc76ec5e-2c07-46bb-8991-e0ce31cf7912" name="变更" comment="后端:跨域手动配置">
+      <change afterPath="$PROJECT_DIR$/my-project-frontend/src/views/indexView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/WebConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-project-frontend/src/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/net/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-frontend/src/views/welcome/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/views/welcome/LoginPage.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +24,9 @@
         <option value="Record" />
         <option value="Interface" />
         <option value="Vue Single File Component" />
-        <option value="Vue Composition API Component" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -187,7 +187,7 @@
       <workItem from="1719888181686" duration="6227000" />
       <workItem from="1719896992813" duration="7677000" />
       <workItem from="1719988363649" duration="2875000" />
-      <workItem from="1720675744376" duration="4333000" />
+      <workItem from="1720675744376" duration="9290000" />
     </task>
     <task id="LOCAL-00001" summary="project initial">
       <created>1716147415705</created>
@@ -261,7 +261,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719988481394</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="后端:跨域手动配置">
+      <option name="closed" value="true" />
+      <created>1720680298408</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720680298408</updated>
+    </task>
+    <task id="LOCAL-00012" summary="后端:跨域手动配置">
+      <option name="closed" value="true" />
+      <created>1720680304999</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720680304999</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +319,8 @@
     <MESSAGE value="后端:对象转换工具类" />
     <MESSAGE value="前端:基本页面设置" />
     <MESSAGE value="前端:登录页面编写及axios请求封装" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端:登录页面编写及axios请求封装" />
+    <MESSAGE value="后端:跨域手动配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="后端:跨域手动配置" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
