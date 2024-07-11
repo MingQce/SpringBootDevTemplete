@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc76ec5e-2c07-46bb-8991-e0ce31cf7912" name="变更" comment="前端:基本页面设置">
-      <change afterPath="$PROJECT_DIR$/my-project-frontend/src/net/index.js" afterDir="false" />
+    <list default="true" id="dc76ec5e-2c07-46bb-8991-e0ce31cf7912" name="变更" comment="前端:登录页面编写及axios请求封装">
+      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/filter/CorsFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/WebConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/WebConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-project-frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-frontend/src/views/welcome/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/views/welcome/LoginPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project-frontend/src/net/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-frontend/src/net/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +22,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="Vue Single File Component" />
         <option value="Vue Composition API Component" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,7 +100,7 @@
       <recent name="D:\Works\Java Spring\my-project\my-project-frontend" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="Spring Boot.MyProjectBackendApplication">
     <configuration name="MyProjectBackendApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="my-project-backend" />
       <extension name="coverage">
@@ -148,8 +145,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="Spring Boot.MyProjectBackendApplication" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="JUnit.MyProjectBackendApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
@@ -189,6 +186,8 @@
       <workItem from="1719885382867" duration="2683000" />
       <workItem from="1719888181686" duration="6227000" />
       <workItem from="1719896992813" duration="7677000" />
+      <workItem from="1719988363649" duration="2875000" />
+      <workItem from="1720675744376" duration="4333000" />
     </task>
     <task id="LOCAL-00001" summary="project initial">
       <created>1716147415705</created>
@@ -254,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719896790954</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="前端:登录页面编写及axios请求封装">
+      <option name="closed" value="true" />
+      <created>1719988481394</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719988481394</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +302,8 @@
     <MESSAGE value="后端:实现数据库用户校验" />
     <MESSAGE value="后端:对象转换工具类" />
     <MESSAGE value="前端:基本页面设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端:基本页面设置" />
+    <MESSAGE value="前端:登录页面编写及axios请求封装" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端:登录页面编写及axios请求封装" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

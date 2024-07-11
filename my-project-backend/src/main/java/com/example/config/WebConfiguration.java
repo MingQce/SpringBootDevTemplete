@@ -11,4 +11,5 @@ public class WebConfiguration {
     BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
 }

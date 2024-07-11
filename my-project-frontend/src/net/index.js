@@ -40,7 +40,7 @@ function deleteAccessToken(){
     sessionStorage.removeItem(authItemName);
 }
 //处理内部请求
-function internalPost(url, data, header, success, failure = defaultFailure(), error = defaultError()) {
+function internalPost(url, data, header, success, failure = defaultFailure, error = defaultError) {
     axios.post(url, data, {headers: header}).then( ({data})=>{
         if(data.code === 200){
             success(data.data)
@@ -50,7 +50,7 @@ function internalPost(url, data, header, success, failure = defaultFailure(), er
     }).catch(err => error(err))
 }
 //处理内部请求
-function internalGet(url, data, header, success, failure, error = defaultError()) {
+function internalGet(url, data, header, success, failure, error = defaultError) {
     axios.get(url, {headers: header}).then( ({data})=>{
         if(data.code === 200){
             success(data.data)
@@ -60,14 +60,14 @@ function internalGet(url, data, header, success, failure, error = defaultError()
     }).catch(err => error(err))
 }
 //登录请求处理
-function login(username, password, remember, success, failure = defaultFailure()) {
+function login(username, password, remember, success, failure = defaultFailure) {
     internalPost('/api/auth/login',{
         username: username,
         password: password,
     },{
         'Content-Type': 'application/x-www-form-urlencoded',    //表单发送格式
     }, (data) => {
-        storeAccessToken(remember,data.token,data.expire)
+        storeAccessToken(data.token,remember,data.expire)
         ElMessage.success(`登录成功,欢迎${username}来到我们的系统`)
         success(data)
     },failure)
