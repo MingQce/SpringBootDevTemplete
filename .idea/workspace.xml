@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc76ec5e-2c07-46bb-8991-e0ce31cf7912" name="变更" comment="前端:退出登录以及路由守卫实现">
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/RabbitConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/controller/AuthorizeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/controller/exception/ValidationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/entity/vo/request/ConfirmResetVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/entity/vo/request/EmailRegisterVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/entity/vo/request/EmailResetVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/listener/MailQueueListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/FlowUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85f44375-3bc1-456e-aaa6-5fdd128cf0a6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="dc76ec5e-2c07-46bb-8991-e0ce31cf7912" name="变更" comment="后端:验证码发送">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/entity/dto/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/entity/dto/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/mapper/AccountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/service/Impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/service/Impl/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/java/com/example/utils/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-project-backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my-project-backend/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +188,7 @@
       <workItem from="1722324724600" duration="10605000" />
       <workItem from="1722412213939" duration="10744000" />
       <workItem from="1722591616682" duration="2072000" />
-      <workItem from="1722912443590" duration="456000" />
+      <workItem from="1722912443590" duration="3853000" />
     </task>
     <task id="LOCAL-00001" summary="project initial">
       <created>1716147415705</created>
@@ -305,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720685306577</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="后端:验证码发送">
+      <option name="closed" value="true" />
+      <created>1722913167421</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722913167421</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +338,8 @@
     <MESSAGE value="前端:登录页面编写及axios请求封装" />
     <MESSAGE value="后端:跨域手动配置" />
     <MESSAGE value="前端:退出登录以及路由守卫实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端:退出登录以及路由守卫实现" />
+    <MESSAGE value="后端:验证码发送" />
+    <option name="LAST_COMMIT_MESSAGE" value="后端:验证码发送" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
