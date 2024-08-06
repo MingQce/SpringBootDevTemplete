@@ -7,7 +7,10 @@ import com.example.entity.BaseData;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
+
 @TableName("db_account")  //映射数据库中对应的表
 @AllArgsConstructor  //自动生成构造方法
 @Data  //get,set等方法...
@@ -18,6 +21,6 @@ public class Account implements BaseData {  //使用BaseData接口提供的方�
     String password;
     String email;
     String role;
-    LocalDateTime registerTime;
+    Date registerTime;
 
 }

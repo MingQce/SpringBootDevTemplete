@@ -43,7 +43,7 @@ public class SecurityConfiguration {//配置SpringSecurity
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         return http  //新版本要求使用lambda表达式进行配置
                 .authorizeHttpRequests(conf -> conf //配置请求验证
-                        .requestMatchers("/api/auth/**").permitAll()  //放行登录相关请求
+                        .requestMatchers("/api/auth/**","/error").permitAll()  //放行登录相关请求
                         .anyRequest().authenticated()  //其他所有请求都需要经过验证
                 )
                 .formLogin(conf -> conf  //配置登录
